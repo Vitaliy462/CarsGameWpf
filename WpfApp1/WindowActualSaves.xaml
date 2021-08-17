@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfApp1.WindowActualSaves"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="WindowActualSaves" Height="450" Width="1500">
+    <Grid>
+        <FlowDocumentReader UseLayoutRounding="True" SnapsToDevicePixels="True" Width="1500">
+            <FlowDocumentReader.Resources>
+                <Style TargetType="TableCell">
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </FlowDocumentReader.Resources>
+            <FlowDocument ColumnWidth="1000" PageWidth="1000" IsColumnWidthFlexible="True">
+                <Table x:Name="mytable" CellSpacing="0">
+                    <Table.Columns>
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell BorderBrush="Black" BorderThickness="1" >
+                                <Paragraph FontWeight="Bold">Player_id</Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                <Paragraph FontWeight="Bold">Car_id</Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                <Paragraph FontWeight="Bold">Accum</Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                <Paragraph FontWeight="Bold">Engine</Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                <Paragraph FontWeight="Bold">Disk</Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                <Paragraph FontWeight="Bold">Money</Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                <Paragraph FontWeight="Bold">Km</Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                <Paragraph FontWeight="Bold"></Paragraph>
+                            </TableCell>
+                        </TableRow>
+                       
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </FlowDocumentReader>
+        <Button x:Name="addNew" Height="30"  Width="100"  Content="Add new" Click="AddNew" Margin="0,182,74,184"  HorizontalAlignment="Right" />
+        <Button x:Name="deletaAll" Height="30"  Width="100"  Content="Delete all" Click="DeleteAll" Margin="0,88,74,303"  HorizontalAlignment="Right" />
+    </Grid>
+</Window>
