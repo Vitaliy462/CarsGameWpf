@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+/WpfApp1/.vs*/ 
+/WpfApp1/bin*/
+
+/WpfApp1/obj*/
+/WpfApp1/packages*/
