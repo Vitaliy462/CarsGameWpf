@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid>
+        <Grid x:Name="panelGame" Visibility="Visible" Margin="0,0,-8,336" Width="800">
+            <Button x:Name="start" Height="30"  Width="100"  Content="Start" Click="ButtonStart" Margin="0,182,74,184"  HorizontalAlignment="Right" />
+            <Button x:Name="repair"  Width="100" Height="30" Content="Repair 0 $" Click="ButtonRepair" Margin="0,230,74,154"  HorizontalAlignment="Right" Visibility="Hidden"/>
+            <Label x:Name="money" Content="0 $"  Width ="100" Height="30" Margin="618,20,74,346"  />
+            <Label x:Name="drived" Content="0 km" Width = "100" Height="30" Margin="618,50,74,316" />
+            <Label x:Name="carInfo" Content="Info" Margin="0,0,500,0" Width = "300" />
+            <Button x:Name="drive"  Width="100" Height="30" Content="Drive" Click="Button_Drive" Margin="0,130,74,236" HorizontalAlignment="Right" />
+            <Button x:Name="create_disk"  Width="100" Height="30" Content="create" Click="Button1" Margin="0,289,74,116" HorizontalAlignment="Right" />
+            <Button x:Name="load_disks"  Width="100" Height="30" Content="load" Click="Button2" Margin="0,336,74,69" HorizontalAlignment="Right" />
+            <Image Source="1.jpg" Margin="305,68,245,115" Width="250" Height="250" Stretch="UniformToFill" >
+                <Image.RenderTransform>
+                    <RotateTransform x:Name="AnimatedRotateTransform" Angle="0" />
+                </Image.RenderTransform>
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="AnimatedRotateTransform"
+                                     Storyboard.TargetProperty="Angle" 
+                                    To="10" Duration="0:0:3" RepeatBehavior="Forever" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
+        </Grid>
+        <Grid x:Name="shop" Visibility="Visible" Margin="10,420,10,58" Width="800" Height="300">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="257*"/>
+                <ColumnDefinition Width="143*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="item1" Width="100" Height="30" Content="item1" Click="BuyDetail" Margin="131,22,283,248" />
+            <Button x:Name="item2" Width="100" Height="30" Content="item2" Click="BuyDetail" Margin="332,22,82,248" />
+            <Button x:Name="item3" Width="100" Height="30" Content="item3" Click="BuyDetail" Margin="492,22,208,248" Grid.ColumnSpan="2" />
+            <Label x:Name="item1Desc" Content="item1Desc" Width = "150" Margin="131,65,233,35" />
+            <Label x:Name="item2Desc" Content="item2Desc" Width = "150" Margin="318,65,46,35" />
+            <Label x:Name="item3Desc" Content="item3Desc" Width = "150" Margin="492,65,158,35" Grid.ColumnSpan="2" />
+
+        </Grid>
+    </Grid>
+</Window>
