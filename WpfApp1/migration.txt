@@ -1,0 +1,3 @@
+Enable-Migrations -ContextTypeName WpfApp1.DB.DetailsContext -MigrationsDirectory Migrations\DetailMigrations
+Enable-Migrations -ContextTypeName WpfApp1.DB.CarContext -MigrationsDirectory Migrations\CarMigrations
+Enable-Migrations -ContextTypeName WpfApp1.DB.PlayerContext -MigrationsDirectory Migrations\PlayerMigrations
