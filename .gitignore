@@ -35,3 +35,8 @@
 
 /WpfApp1/obj*/
 /WpfApp1/packages*/
+/CarsGame/.vs*/ 
+/CarsGame/bin*/
+
+/CarsGame/obj*/
+/CarsGame/packages*/
